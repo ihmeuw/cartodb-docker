@@ -1,0 +1,54 @@
+defaults: &defaults
+  ogr2ogr:
+    binary: which ogr2ogr2.1
+  http_port: ${PORT_IF_NOT_DEFAULT}
+  session_domain: ${PUBLIC_HOST}
+  account_host:   ${PUBLIC_URL}
+  subdomainless_urls: true
+  vizjson_cache_domains:
+    - ${PUBLIC_HOST}
+  common_data:
+    protocol: http
+    username: ${DEFAULT_USER}
+  tiler:
+    internal:
+      protocol: http
+      domain:   cartodb-mapsapi
+      host:     cartodb-mapsapi
+    private: &routing_defaults
+      protocol: http
+      domain:   ${PUBLIC_HOST}
+      port:     ${PUBLIC_PORT}
+    public:
+      <<: *routing_defaults
+  sql_api:
+    private:
+      <<: *routing_defaults
+    public:
+      <<: *routing_defaults
+  redis:
+    host: cartodb-redis
+  org_metadata_api:
+    host: ${PUBLIC_HOST}
+  layer_opts:
+    data:
+      options:
+        tiler_domain:   ${PUBLIC_HOST}
+        tiler_port:     ${PUBLIC_PORT}
+        tiler_protocol: http
+        sql_domain:     ${PUBLIC_HOST}
+        sql_port:       ${PUBLIC_PORT}
+        sql_protocol:   http
+  cartodb_com_hosted: false
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults

@@ -1,0 +1,11 @@
+production:
+  host: cartodb-postgis
+
+staging:
+  host: cartodb-postgis
+
+development:
+  host: cartodb-postgis
+
+test:
+  host: cartodb-postgis
