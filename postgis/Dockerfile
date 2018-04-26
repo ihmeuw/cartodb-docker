@@ -31,7 +31,7 @@ RUN apt-get update \
     postgis-2.3 \
     postgresql-9.5-postgis-2.3 \
     postgresql-9.5-postgis-2.3-scripts \
-	&& rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/*
 
 # CartoDB/cartodb-postgresql version
 ENV CARTODB_POSTGRESQL_VERSION=0.22.0
@@ -39,8 +39,8 @@ ENV CARTODB_POSTGRESQL_VERSION=0.22.0
 RUN git clone \
     --branch ${CARTODB_POSTGRESQL_VERSION} \
     --depth 1 git://github.com/CartoDB/cartodb-postgresql.git \
-	&& cd cartodb-postgresql \
-	&& make all install \
+  && cd cartodb-postgresql \
+  && make all install \
   && mkdir -p /docker-entrypoint-initdb.d
 
 COPY initdb-postgis.sh /docker-entrypoint-initdb.d/01-postgis.sh
