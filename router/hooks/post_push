@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+source VERSION
+
+# Split SOFTWARE_VERSION into its constituent parts.
+read SOFTWARE_MAJOR SOFTWARE_MINOR <<< ${SOFTWARE_VERSION//./ }
+# Split IMAGE_VERSION into its constituent parts.
+read IMAGE_MAJOR IMAGE_MINOR IMAGE_PATCH <<< ${IMAGE_VERSION//./ }
+
+tags=( \
+  ${SOFTWARE_MAJOR} \
+  ${SOFTWARE_MAJOR}.${SOFTWARE_MINOR} \
+  ${SOFTWARE_MAJOR}.${SOFTWARE_MINOR}-${IMAGE_MAJOR} \
+  ${SOFTWARE_MAJOR}.${SOFTWARE_MINOR}-${IMAGE_MAJOR}.${IMAGE_MINOR} \
+  ${SOFTWARE_MAJOR}.${SOFTWARE_MINOR}-${IMAGE_MAJOR}.${IMAGE_MINOR}.${IMAGE_PATCH} \
+)
+
+for tag in ${tags[@]}; do
+  docker tag $IMAGE_NAME ${DOCKER_REPO}:${tag}
+  docker push ${DOCKER_REPO}:${tag}
+done
