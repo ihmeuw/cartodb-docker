@@ -116,7 +116,7 @@ RUN bundle install \
   && CPLUS_INCLUDE_PATH=/usr/include/gdal \
     C_INCLUDE_PATH=/usr/include/gdal \
     PATH=$PATH:/usr/include/gdal \
-    pip install --no-use-wheel -r python_requirements.txt \
+    pip install -r python_requirements.txt \
   # Build the project.
   && bundle install \
   && PATH=$PATH:/cartodb/node_modules/grunt-cli/bin \
