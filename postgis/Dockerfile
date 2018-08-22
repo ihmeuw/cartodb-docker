@@ -16,17 +16,18 @@ RUN apt-get update \
     proj-bin \
     proj-data \
     # - JSON
-    libjson0 \
-    libjson0-dev \
+    libjson-c3 \
+    libjson-c-dev \
     python-simplejson \
     # - GEOS
-    libgeos-c1 \
+    libgeos-c1v5 \
     libgeos-dev \
     # - GDAL
+    libgdal20 \
     gdal-bin \
-    libgdal1-dev \
+    libgdal-dev \
     # PostGIS
-    liblwgeom-2.1.4 \
+    liblwgeom-2.3\* \
     libxml2-dev \
     postgis-2.3 \
     postgresql-9.5-postgis-2.3 \
