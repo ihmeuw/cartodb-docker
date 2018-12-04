@@ -1,6 +1,8 @@
 # cartodb-mapsapi
 ### Maps API for cartodb-docker
 
+`ihme/cartodb-mapsapi` image on DockerHub: https://hub.docker.com/r/ihme/cartodb-mapsapi/
+
 This image contains the [Carto Maps API](https://github.com/CartoDB/Windshaft-cartodb), a map tile server.
 
 ## Configuration

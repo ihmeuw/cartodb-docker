@@ -14,6 +14,16 @@ In addition, we supply a simple nginx reverse-proxy server image (in the `router
 
 See the `README.md` file in each subdirectory for details on using the various Docker images.
 
+## Images
+
+The images are available on DockerHub:
+- [ihme/cartodb-editor](https://hub.docker.com/r/ihme/cartodb-editor/)
+- [ihme/cartodb-mapsapi](https://hub.docker.com/r/ihme/cartodb-mapsapi/)
+- [ihme/cartodb-sqlapi](https://hub.docker.com/r/ihme/cartodb-sqlapi/)
+- [ihme/cartodb-postgis](https://hub.docker.com/r/ihme/cartodb-postgis/)
+- [ihme/cartodb-redis](https://hub.docker.com/r/ihme/cartodb-redis/)
+- [ihme/cartodb-router](https://hub.docker.com/r/ihme/cartodb-router/)
+
 ## Usage
 
 To run this application, you need to have a recent version of Docker installed. To spin up a bare-bones implementation locally, with default configuration, simply run this command from the project root:

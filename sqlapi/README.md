@@ -1,6 +1,8 @@
 # cartodb-sqlapi
 ### SQL API for cartodb-docker
 
+`ihme/cartodb-sqlapi` image on DockerHub: https://hub.docker.com/r/ihme/cartodb-sqlapi/
+
 This image contains the [Carto SQL API](https://github.com/CartoDB/CartoDB-SQL-API), which allows making SQL queries against the PostGIS database via a REST API.
 
 ## Configuration

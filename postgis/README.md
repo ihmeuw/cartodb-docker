@@ -1,6 +1,8 @@
 # cartodb-postgis
 ### PostGIS database server for cartodb-docker
 
+`ihme/cartodb-postgis` image on DockerHub: https://hub.docker.com/r/ihme/cartodb-postgis/
+
 This image contains a PostGIS database server with extensions specific to Carto, taken from the [cartodb-postgresql](https://github.com/CartoDB/cartodb-postgresql) GitHub repo. Its image tag references the corresponding version of that repo.
 
 ## Data Persistence

@@ -1,6 +1,8 @@
 # cartodb-editor
 ### Carto web application
 
+`ihme/cartodb-editor` image on DockerHub: https://hub.docker.com/r/ihme/cartodb-editor/
+
 This image contains the [Carto web application](https://github.com/CartoDB/cartodb), used to administer the Carto system.
 
 ## Configuration
