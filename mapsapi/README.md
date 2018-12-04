@@ -1,4 +1,4 @@
-# cartodb-sqlapi
+# cartodb-mapsapi
 ### Maps API for cartodb-docker
 
 This image contains the [Carto Maps API](https://github.com/CartoDB/Windshaft-cartodb), a map tile server.
